@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+<style type = "text/css">
+	header 
+ {
+	background: linear-gradient(to top, #00ccff 0%, #ffffff 100%);
+	color: black;
+	border-radius: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header h2
+{
+	padding: 25px;
+	text-align: center;
+}
+.ml-container p
+{ 
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 10px;
+	margin-top: 0px;
+}
+.ml-container fieldset
+{
+	 background-color: #eeeeee;
+	 margin-left:200px;
+	 padding: 25px;
+	 height: 250px;
+	 width: 850px;
+	 margin-top: 25px;
+
+}
+.ml-container textarea
+{
+	
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 150px;
+}
+.ml-container h4
+{
+	text-align: center;
+}
+.ml-container input[type=button], input[type=submit], input[type=reset] {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 13px;
+  text-decoration: none;
+  font-size:15px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+</style>
+
+</head>
+<body>
+	<header>
+	<h2>Covid-19 sentiment analysis</h2>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<fieldset>
+		<p><b>Enter Your Tweet Here</b></p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="6" cols="70"></textarea>
+		<br/>
+		<h4><input type="submit" class="btn-info" value="predict"></h4>
+		</fieldset>
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
